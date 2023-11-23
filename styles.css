@@ -61,6 +61,7 @@ p {
 
 .cyanText {
     color: var(--pri-cyan);
+    padding-bottom: .5rem;
 }
 
 .greenText {
@@ -71,10 +72,17 @@ p {
 .bodyText {
     color: var(--neu-grblue);
     line-height: 1.8;
+    padding-bottom: .5rem;
 }
 
 .subscription {
+    display: flex;
+    gap: .5rem;
     background-color: var(--pri-cyan);
+}
+
+.subscription h3 {
+    padding-bottom: .75rem;
 }
 
 .cost-per-month {
@@ -106,7 +114,7 @@ button {
     font-weight: 700;
     font-size: 16px;
 
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     box-shadow: 0px 8px 12px rgba(2, 97, 83, 0.301);
 }
 
@@ -116,4 +124,56 @@ button {
 
 .whyBody {
     line-height: 1.4;
+}
+
+@media screen and (min-width: 600px){
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        min-height: 100svh;
+      }
+
+    .grid {
+        max-width: 636px;
+        grid-template-areas: 
+        "Community Community"
+        "Subscription Why-us";  
+        margin: 2rem;
+    }
+
+    .grid-item {
+        padding: 2.5rem;
+    }
+
+    .cyanText {
+        font-size: 24px;
+    }
+
+    .greenText {
+        color: var(--pri-yellow);
+        font-size: 18px;
+    }
+
+    .bodyText {
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    .join-comm {
+        grid-area: Community;
+    }
+
+    .subscription {
+        grid-area: Subscription;
+    }
+
+    .why-us {
+        grid-area: Why-us;
+    }
+
+    .whyBody {
+        line-height: 1.5;
+    }
 }
